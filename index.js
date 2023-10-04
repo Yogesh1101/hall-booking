@@ -112,7 +112,7 @@ app.get("/customer/bookings", (req, res) => {
 });
 
 // list how many times a customer has booked the room with below details
-app.get("booking-history/:customer", (req, res) => {
+app.get("/booking-history/:customer", (req, res) => {
   const { name } = req.params;
   const history = bookings.filter((book) => book.customerName == name);
   res.json(history);
